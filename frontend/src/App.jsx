@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom"
-import Home from './pages/Home';
+import Home from './pages/SalaryHome';
 import CreateSalaryRecoard from "./pages/CreateSalaryRecoard";
 import ShowSalaryRecoards from './pages/ShowSalaryRecoards';
 import EditSalaryRecoard from './pages/EditSalaryRecoard';
