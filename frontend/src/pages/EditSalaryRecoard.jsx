@@ -63,7 +63,7 @@ const EditSalaryRecoard = () => {
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Salary Edited successfully', { variant: 'success' });
-        navigate('/');
+        navigate('/salary');
       })
       .catch((error) => {
         setLoading(false);

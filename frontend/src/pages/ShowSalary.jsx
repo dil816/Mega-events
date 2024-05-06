@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 
-import backgroundImage from '../assets/SalaryAssets/bimage4.jpg'
+import backgroundImage from '../assets/SalaryAssets/bimage24.jpg'
 
 
 const ShowSalary = () => {
@@ -55,7 +55,7 @@ const ShowSalary = () => {
           </div>
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500 font-bold text-blue-500'>Name</span>
-            <span className='font-bold text-black'>{salary.name}</span>
+            <span className='font-bold text-black '>{salary.name}</span>
           </div>
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500 font-bold text-blue-500'>Basic Salary</span>

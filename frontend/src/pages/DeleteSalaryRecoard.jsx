@@ -19,7 +19,7 @@ const DeleteSalaryRecoard = () => {
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Salary Deleted successfully', { variant: 'success' });
-        navigate('/');
+        navigate('/salary');
       })
       .catch((error) => {
         setLoading(false);

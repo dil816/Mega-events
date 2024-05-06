@@ -46,7 +46,7 @@ const CreateSalaryRecoard = () => {
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Created successfully', { variant: 'success' });
-        navigate('/');
+        navigate('/salary');
       })
       .catch((error) => {
         setLoading(false);

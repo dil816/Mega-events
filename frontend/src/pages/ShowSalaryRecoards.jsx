@@ -6,7 +6,7 @@ import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 import { Link } from 'react-router-dom'
 
-import backgroundImage from '../assets/SalaryAssets/bimage7.jpg'
+import backgroundImage from '../assets/SalaryAssets/bimage22.jpg'
 
 
 const ShowSalaryRecoards = () => {
