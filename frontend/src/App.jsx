@@ -60,6 +60,13 @@ import EditTicket from './pages/EditTicket';
 import DeleteTicket from './pages/DeleteTicket';
 import Navbar from './components/Ticket/Navbar';
 
+
+import PaymentHome from "./pages/PaymentHome";
+import CreatePayment from "./pages/CreatePayment";
+import ShowPayment from "./pages/ShowPayment";
+import EditPayment from "./pages/EditPayment";
+import DeletePayment from "./pages/DeletePayment";
+
 import Ajendas from "./pages/Ajendas";
 import Navbar from "./components/Navbar";
 import EventView from "./pages/EventView";
@@ -67,6 +74,7 @@ import { AddEvent } from "./pages/AddEvent";
 import Events from "./pages/Events";
 import EditEvent from "./pages/EditEvent";
 import EventInfo from "./pages/EventInfo";
+
 
 
 
@@ -128,6 +136,12 @@ const App = () => {
       <Route path='/ticket/details/:id' element={<ShowTicket />} />
       <Route path='/ticket/edit/:id' element={<EditTicket />} />
       <Route path='/ticket/delete/:id' element={<DeleteTicket />} />
+
+      <Route path="/payment" element={<PaymentHome />} />
+        <Route path="/payment/create" element={<CreatePayment />} />
+        <Route path="/payment/details/:id" element={<ShowPayment />} />
+        <Route path="/payment/edit/:id" element={<EditPayment />} />
+        <Route path="/payment/delete/:id" element={<DeletePayment />} />
       
       <Route path="/ajenda" element={<Ajendas />} />
         <Route path="/addajenda/:eventId" element={<Ajendas />} />
