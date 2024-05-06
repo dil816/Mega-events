@@ -1,10 +1,14 @@
 
+
 import express, { request, response } from "express";
 import mongoose from "mongoose";
 import { PORT, mongoDBURL } from "./config.js";
 import { Salary } from "./models/salaryModel.js";
 import salaryRoute from './routes/salaryRoute.js'
 import feedbackRoute from "./routes/feedbackRoute.js";
+import usersRoute from "./routes/usersRoute.js";
+import registeRoute from "./routes/registerRoute.js";
+import loginRoute from "./routes/loginRoute.js";
 import cors from 'cors';
 
 
@@ -22,6 +26,9 @@ app.get("/", (request, response) => {
 
 app.use('/salary',salaryRoute);
 app.use("/feedback", feedbackRoute);
+app.use("/users", usersRoute);
+app.use("/register", registeRoute);
+app.use("/login", loginRoute);
 
 
        
@@ -36,4 +43,5 @@ connect(mongoDBURL)
     .catch((error) => {
         console.error('Error connecting to database:', error);
     });
+
 
