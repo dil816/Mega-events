@@ -9,6 +9,8 @@ import "../components/styles/home.css";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import UserPdf from "../components/users/UserPdf";
 
+import backgroundImage from '../assets/UserAssets/back2.jpg'
+
 const Home = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -39,6 +41,16 @@ const Home = () => {
   //console.log(users);
   return (
     <>
+
+<div
+      className='p-4'
+      style={{
+        backgroundImage: `url(${backgroundImage})`, // Set background image
+        backgroundSize: 'cover', // Adjust background image size
+        backgroundPosition: 'center', // Adjust background image position
+        minHeight: '100vh', // Ensure the background covers the entire screen
+      }}
+    >
       <div className="p-4">
         <div className="flex justify-center items-center gap-x-4"></div>
         <div className="flex justify-between items-center">
@@ -123,6 +135,7 @@ const Home = () => {
             </tbody>
           </table>
         )}
+      </div>
       </div>
     </>
   );

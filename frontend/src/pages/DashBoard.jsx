@@ -4,6 +4,8 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 //import "@fortawesome/fontawesome-free/css/all.min.css";
 import {useLocation} from 'react-router-dom';
 
+import backgroundImage from '../assets/UserAssets/dashboard.jpg'
+
 function DashBoard() {
   const location = useLocation();
   console.log(location.state.userId);
@@ -11,15 +13,14 @@ function DashBoard() {
   return (
     <div>
       <div
-        className="container"
-        style={{
-          backgroundColor: "#FFFFFF",
-          marginTop: "0px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+      className='p-4'
+      style={{
+        backgroundImage: `url(${backgroundImage})`, // Set background image
+        backgroundSize: 'cover', // Adjust background image size
+        backgroundPosition: 'center', // Adjust background image position
+        minHeight: '100vh', // Ensure the background covers the entire screen
+      }}
+    >
         <span
           className="text"
           style={{
@@ -44,7 +45,7 @@ function DashBoard() {
           <div
             className="rectangle"
             style={{
-              backgroundColor: "#3b3737",
+              backgroundColor: "#a2a29f",
               padding: "10px 40px",
               borderRadius: "20px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -101,7 +102,7 @@ function DashBoard() {
           <div
             className="rectangle"
             style={{
-              backgroundColor: "#3b3737",
+              backgroundColor: "#a2a29f",
               padding: "10px 40px",
               borderRadius: "20px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
