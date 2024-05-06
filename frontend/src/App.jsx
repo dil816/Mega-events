@@ -1,27 +1,22 @@
-import React from 'react'
-import { Routes, Route } from "react-router-dom"
-import SalaryHome from './pages/SalaryHome';
-import CreateSalaryRecoard from "./pages/CreateSalaryRecoard";
-import ShowSalaryRecoards from './pages/ShowSalaryRecoards';
-import EditSalaryRecoard from './pages/EditSalaryRecoard';
-import DeleteSalaryRecoard from './pages/DeleteSalaryRecoard';
-import ShowSalary from './pages/ShowSalary';
-import Navbar from './components/Navbar';
+import { Routes, Route } from "react-router-dom";
+import PaymentHome from "./pages/PaymentHome";
+import CreatePayment from "./pages/CreatePayment";
+import ShowPayment from "./pages/ShowPayment";
+import EditPayment from "./pages/EditPayment";
+import DeletePayment from "./pages/DeletePayment";
 
-const App = () => {
+function App() {
   return (
     <>
-    <Navbar />
-    <Routes>
-      <Route path='/salary' element={<SalaryHome />} />
-      <Route path='/salary/create' element={<CreateSalaryRecoard />} />
-      <Route path='/salary/details/:_id' element={<ShowSalaryRecoards />} />
-      <Route path='/salary/edit/:_id' element={<EditSalaryRecoard />} />
-      <Route path='/salary/delete/:_id' element={<DeleteSalaryRecoard />} />
-      <Route path='/salary/details1/:_id' element={<ShowSalary />} />
-    </Routes>
+      <Routes>
+        <Route path="/payment" element={<PaymentHome />} />
+        <Route path="/payment/create" element={<CreatePayment />} />
+        <Route path="/payment/details/:id" element={<ShowPayment />} />
+        <Route path="/payment/edit/:id" element={<EditPayment />} />
+        <Route path="/payment/delete/:id" element={<DeletePayment />} />
+      </Routes>
     </>
   );
 }
 
-export default App
+export default App;
