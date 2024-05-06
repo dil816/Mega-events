@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import transportRoute from "./routes/transportRoute.js";
 import cors from "cors";
 
+
 const app = express();
 
 app.use(express.json());
