@@ -5,7 +5,7 @@ import { upload } from "../middleware/requirePhoto.js";
 const router = express.Router();
 
 // Route for Save a new Book for database
-router.post("/",upload.single("file"), async (request, response) => {
+router.post("/", upload.single("file"), async (request, response) => {
   try {
     if (
       !request.body.b_Code ||
@@ -27,7 +27,7 @@ router.post("/",upload.single("file"), async (request, response) => {
       a_time: request.body.a_time,
       a_seat: request.body.a_seat,
       price: request.body.price,
-      photo: request.file.filename
+      photo: request.file.filename,
     };
 
     const book = await Transport.create(newBook);
@@ -80,7 +80,8 @@ router.put("/:id", async (request, response) => {
       !request.body.price
     ) {
       return response.status(400).send({
-        message: "Send all required fields: b_Code,destination, d_time, a_time,a_seat,price",
+        message:
+          "Send all required fields: b_Code,destination, d_time, a_time,a_seat,price",
       });
     }
 

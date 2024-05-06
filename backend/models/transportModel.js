@@ -28,7 +28,7 @@ const transportSchema = mongoose.Schema(
     },
     photo: {
       type: String,
-    }
+    },
   },
   {
     timestamps: true,
