@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/feedback/BackButton";
 import Spinner from "../components/Spinner";
 
 import backgroundImage from '../assets/FeedbackAsserts/blur.jpg'
