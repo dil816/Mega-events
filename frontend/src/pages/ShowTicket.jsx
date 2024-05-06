@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/Ticket/BackButton";
 import Spinner from "../components/Spinner";
 
 const ShowTicket = () => {

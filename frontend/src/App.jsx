@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import Home from './pages/Ticket';
 import CreateTicket from './pages/CreateTicket';
 import ShowTicket from './pages/ShowTicket';
 import EditTicket from './pages/EditTicket';
 import DeleteTicket from './pages/DeleteTicket';
-import Navbar from './components/home/Navbar';
+import Navbar from './components/Ticket/Navbar';
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
     <>
     <Navbar/>
     <Routes>
-      <Route path='/' element={<Home />} />
+      <Route path='/ticket' element={<Home />} />
       <Route path='/ticket/create' element={<CreateTicket />} />
       <Route path='/ticket/details/:id' element={<ShowTicket />} />
       <Route path='/ticket/edit/:id' element={<EditTicket />} />

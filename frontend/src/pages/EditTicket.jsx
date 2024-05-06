@@ -1,9 +1,12 @@
 import  { useState, useEffect } from 'react';
-import BackButton from '../components/BackButton';
+import BackButton from '../components/Ticket/BackButton';
 import Spinner from '../components/Spinner';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
+
+
+import backgroundImage from '../assets/TicketAssets/back2.jpg'
 
 const EditTicket = () => {
   const [name, setName] = useState('');
@@ -69,7 +72,7 @@ const EditTicket = () => {
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Ticket Edited successfully', { variant: 'success' });
-        navigate('/');
+        navigate('/ticket');
       })
       .catch((error) => {
         setLoading(false);
@@ -80,13 +83,24 @@ const EditTicket = () => {
   };
 
   return (
+
+    
+    <div
+      className='p-4'
+      style={{
+        backgroundImage:` url(${backgroundImage})`, // Set background image
+        backgroundSize: 'cover', // Adjust background image size
+        backgroundPosition: 'center', // Adjust background image position
+        minHeight: '100vh', // Ensure the background covers the entire screen
+      }}
+    >
     <div className='p-4'>
       <BackButton />
-      <h1 className='text-3xl my-4'>Edit Ticket</h1>
+      <h1 className='text-3xl my-4 text-blue-800'>Edit Ticket</h1>
       {loading ? <Spinner /> : ''}
       <div className='flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto'>
         <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Name</label>
+          <label className='text-xl mr-4 text-gray-500 text-blue-800'>Name</label>
           <input
             type='text'
             value={name}
@@ -95,7 +109,7 @@ const EditTicket = () => {
           />
         </div>
         <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Email</label>
+          <label className='text-xl mr-4 text-gray-500 text-blue-800'>Email</label>
           <input
             type='text'
             value={email}
@@ -104,7 +118,7 @@ const EditTicket = () => {
           />
         </div>
         <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Reg_No</label>
+          <label className='text-xl mr-4 text-gray-500 text-blue-800'>Reg_No</label>
           <input
             type='number'
             value={registrationNumber}
@@ -113,7 +127,7 @@ const EditTicket = () => {
           />
         </div>
         <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Event_Type</label>
+          <label className='text-xl mr-4 text-gray-500 text-blue-800'>Event_Type</label>
           <input
             type='text'
             value={eventType}
@@ -122,7 +136,7 @@ const EditTicket = () => {
           />
           </div>
            <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Contact_No</label>
+          <label className='text-xl mr-4 text-gray-500 text-blue-800'>Contact_No</label>
           <input
             type='string'
             value={contactNumber}
@@ -131,7 +145,7 @@ const EditTicket = () => {
           />
           </div>
            <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Req_type</label>
+          <label className='text-xl mr-4 text-gray-500 text-blue-800'>Req_type</label>
           <input
             type='text'
             value={requestType}
@@ -140,7 +154,7 @@ const EditTicket = () => {
           />
           </div>
            <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Subject</label>
+          <label className='text-xl mr-4 text-gray-500 text-blue-800'>Subject</label>
           <input
             type='text'
             value={subject}
@@ -149,7 +163,7 @@ const EditTicket = () => {
           />
           </div>
            <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Message</label>
+          <label className='text-xl mr-4 text-gray-500 text-blue-800'>Message</label>
           <input
             type='text'
             value={message}
@@ -158,7 +172,7 @@ const EditTicket = () => {
           />
           </div>
            <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>File</label>
+          <label className='text-xl mr-4 text-gray-500 text-blue-800'>File</label>
           <input
             type='File'
             
@@ -171,6 +185,7 @@ const EditTicket = () => {
           Update
         </button>
       </div>
+    </div>
     </div>
   )
 }
