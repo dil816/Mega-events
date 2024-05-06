@@ -2,7 +2,7 @@ import multer from "multer";
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    return cb(null, "/Users/pramudithabandara/Desktop/order /frontend/public/images");
+    return cb(null, "/Users/pramudithabandara/Desktop/mega/Mega-events/frontend/public/images");
   },
   filename: function (req, file, cb) {
     return cb(null, `${file.originalname}`);
