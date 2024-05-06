@@ -1,39 +1,22 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import CreateBook from "./pages/CreateBooks";
+import ShowBook from "./pages/ShowBook";
+import EditBook from "./pages/EditBook";
+import DeleteBook from "./pages/DeleteBook";
+import Navbar from "./components/home/Navbar";
 
-import React from 'react'
-import { Routes, Route } from "react-router-dom"
-import SalaryHome from './pages/SalaryHome';
-import CreateSalaryRecoard from "./pages/CreateSalaryRecoard";
-import ShowSalaryRecoards from './pages/ShowSalaryRecoards';
-import EditSalaryRecoard from './pages/EditSalaryRecoard';
-import DeleteSalaryRecoard from './pages/DeleteSalaryRecoard';
-import ShowSalary from './pages/ShowSalary';
-import Navbar from './components/Navbar';
-
-import Feedback from "./pages/Feedback";
-import CreateFeedback from "./pages/CreateFeedback";
-import ShowFeedback from "./pages/ShowFeedback";
-import EditFeedback from "./pages/EditFeedback";
-import DeleteFeedback from "./pages/DeleteFeedback"
-
-const App = () => {
+function App() {
   return (
     <>
-    <Navbar />
-    <Routes>
-      <Route path='/salary' element={<SalaryHome />} />
-      <Route path='/salary/create' element={<CreateSalaryRecoard />} />
-      <Route path='/salary/details/:_id' element={<ShowSalaryRecoards />} />
-      <Route path='/salary/edit/:_id' element={<EditSalaryRecoard />} />
-      <Route path='/salary/delete/:_id' element={<DeleteSalaryRecoard />} />
-      <Route path='/salary/details1/:_id' element={<ShowSalary />} />
-        
-        <Route path="/feedback" element={<Feedback />} />
-        <Route path="/feedback/create" element={<CreateFeedback />} />
-        <Route path="/feedback/details/:id" element={<ShowFeedback />} />
-        <Route path="/feedback/edit/:id" element={<EditFeedback />} />
-        <Route path="/feedback/delete/:id" element={<DeleteFeedback />} />
-    </Routes>
-
+    <Navbar/>
+      <Routes>
+        <Route path="/books" element={<Home />} />
+        <Route path="/books/create" element={<CreateBook />} />
+        <Route path="/books/details/:id" element={<ShowBook />} />
+        <Route path="/books/edit/:id" element={<EditBook />} />
+        <Route path="/books/delete/:id" element={<DeleteBook />} />
+      </Routes>
     </>
   );
 }
