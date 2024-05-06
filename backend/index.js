@@ -1,43 +1,39 @@
-import express from "express";
-import { PORT, mongoDBURL } from "./config.js";
+
+import express, { request, response } from "express";
 import mongoose from "mongoose";
+import { PORT, mongoDBURL } from "./config.js";
+import { Salary } from "./models/salaryModel.js";
+import salaryRoute from './routes/salaryRoute.js'
 import feedbackRoute from "./routes/feedbackRoute.js";
-import cors from "cors";
+import cors from 'cors';
+
 
 const app = express();
 
-// Middleware for parsing request body
 app.use(express.json());
 
-// Middleware for handling CORS POLICY
-// Option 1: Allow All Origins with Default of cors(*)
 app.use(cors());
-// Option 2: Allow Custom Origins
-/*
-app.use(
-  cors({
-    origin: "",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
-  })
-);
-*/
+
 
 app.get("/", (request, response) => {
-  console.log(request);
-  return response.status(234).send("welcome to mern");
-});0 
+    console.log(request);
+    return response.status(234).send(`Welcome to mern stack tutorial`);
+});
 
+app.use('/salary',salaryRoute);
 app.use("/feedback", feedbackRoute);
 
-mongoose
-  .connect(mongoDBURL)
-  .then(() => {
-    console.log("App connect to database");
-    app.listen(PORT, () => {
-      console.log(`App listen to port: ${PORT}`);
+
+       
+mongoose.
+connect(mongoDBURL)
+    .then(() => {
+        console.log('App connected to database');
+        app.listen(PORT, () => {
+            console.log(`App is listening to port: ${PORT}`);
+        });
+    })
+    .catch((error) => {
+        console.error('Error connecting to database:', error);
     });
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+
