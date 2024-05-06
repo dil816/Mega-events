@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import BackButton from '../components/BackButton';
+import BackButton from '../components/Salary/BackButton';
 import Spinner from '../components/Spinner';
 import { Link } from 'react-router-dom'
 
@@ -53,48 +53,48 @@ const ShowSalaryRecoards = () => {
         <div className='flex flex-col border-2 border-sky-400 rounded-xl w-fit p-4 mx-auto '>
           <div className='my-4'>
             
-            <span className='text-xl mr-4 text-gray-500 font-bold text-black'>Id</span>
+            <span className='text-xl mr-4  font-bold text-black'>Id</span>
             <span className='font-bold text-violet-900'>{salary._id}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500 font-bold text-black'>Name</span>
+            <span className='text-xl mr-4 font-bold text-black'>Name</span>
             <span className='font-bold text-violet-900'>{salary.name}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500 font-bold text-black'>Basic Salary</span>
+            <span className='text-xl mr-4  font-bold text-black'>Basic Salary</span>
             <span className='font-bold text-violet-900'>{salary.basicSalary}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500 font-bold text-black'>Attendance</span>
+            <span className='text-xl mr-4 font-bold text-black'>Attendance</span>
             <span className='font-bold text-violet-900'>{salary.attendance}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500 font-bold text-black'>Allowance</span>
+            <span className='text-xl mr-4 font-bold text-black'>Allowance</span>
             <span className='font-bold text-violet-900'>{salary.allowance}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500 font-bold text-black'>Epf</span>
+            <span className='text-xl mr-4 font-bold text-black'>Epf</span>
             <span className='font-bold text-violet-900'>{salary.epf}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500 font-bold text-black'>Etf</span>
+            <span className='text-xl mr-4 font-bold text-black'>Etf</span>
             <span className='font-bold text-violet-900'>{salary.etf}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500 font-bold text-black'>Tax</span>
+            <span className='text-xl mr-4 font-bold text-black'>Tax</span>
             <span className='font-bold text-violet-900'>{salary.tax}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500 font-bold text-black'>NetSalary</span>
+            <span className='text-xl mr-4 font-bold text-black'>NetSalary</span>
             <span className='font-bold text-violet-900'>{salary.netSalary}</span>
           </div>
           
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500 font-bold text-black'>Create Time</span>
+            <span className='text-xl mr-4 font-bold text-black'>Create Time</span>
             <span className='font-bold text-violet-900'>{new Date(salary.createdAt).toString()}</span>
           </div>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500 font-bold text-black'>Last Update Time</span>
+            <span className='text-xl mr-4 font-bold text-black'>Last Update Time</span>
             <span className='font-bold text-violet-900'>{new Date(salary.updatedAt).toString()}</span>
           </div>
         </div>

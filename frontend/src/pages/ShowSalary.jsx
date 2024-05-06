@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import BackButton from '../components/BackButton';
+import BackButton from '../components/Salary/BackButton';
 import Spinner from '../components/Spinner';
 
 import backgroundImage from '../assets/SalaryAssets/bimage24.jpg'
@@ -50,7 +50,7 @@ const ShowSalary = () => {
       ) : (
         <div className='flex flex-col border-2 border-sky-400 rounded-xl w-fit p-4 mx-auto'>
           <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500 font-bold text-blue-500'>Id</span>
+            <span className='text-xl mr-4 text-gray-500 font-bold text-blue-500 '>Id</span>
             <span className='font-bold text-black'>{salary._id}</span>
           </div>
           <div className='my-4'>
