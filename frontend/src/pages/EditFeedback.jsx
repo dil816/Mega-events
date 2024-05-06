@@ -106,7 +106,7 @@ function EditFeedback() {
           />
         </div>
         <div className="my-4">
-          <label className="text-xl mr-4 text-gray-500">Service</label>
+          <label className="text-xl mr-4 text-gray-500">Are you satisfied with our services ?</label>
           <input
             type="text"
             value={Service}
@@ -115,7 +115,7 @@ function EditFeedback() {
           />
         </div>
         <div className="my-4">
-          <label className="text-xl mr-4 text-gray-500">Expected</label>
+          <label className="text-xl mr-4 text-gray-500">Is there anything you didn't get that you expected ?</label>
           <input
             type="text"
             value={Expected}
