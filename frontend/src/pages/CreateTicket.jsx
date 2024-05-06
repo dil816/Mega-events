@@ -54,19 +54,6 @@ const CreateTicket = () => {
       return;
     }
 
-    /*
-    const data = {
-      name,
-      email,
-      registrationNumber,
-      eventType,
-      contactNumber,
-      requestType,
-      subject,
-      message,
-      attachment,
-
-    };*/
 
     const data = new FormData();
     data.append("name", name);
