@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 const Spinner = () => {
@@ -7,3 +8,4 @@ const Spinner = () => {
 }
 
 export default Spinner
+

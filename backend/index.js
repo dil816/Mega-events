@@ -1,8 +1,10 @@
+
 import express, { request, response } from "express";
 import mongoose from "mongoose";
 import { PORT, mongoDBURL } from "./config.js";
 import { Salary } from "./models/salaryModel.js";
 import salaryRoute from './routes/salaryRoute.js'
+import feedbackRoute from "./routes/feedbackRoute.js";
 import cors from 'cors';
 
 
@@ -19,6 +21,7 @@ app.get("/", (request, response) => {
 });
 
 app.use('/salary',salaryRoute);
+app.use("/feedback", feedbackRoute);
 
 
        
@@ -33,3 +36,4 @@ connect(mongoDBURL)
     .catch((error) => {
         console.error('Error connecting to database:', error);
     });
+
