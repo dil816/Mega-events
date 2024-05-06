@@ -1,8 +1,12 @@
-import express from "express";
-import { PORT, mongoDBURL } from "./config.js";
+
+import express, { request, response } from "express";
 import mongoose from "mongoose";
-import transportRoute from "./routes/transportRoute.js";
-import cors from "cors";
+import { PORT, mongoDBURL } from "./config.js";
+import { Salary } from "./models/salaryModel.js";
+import salaryRoute from './routes/salaryRoute.js'
+import feedbackRoute from "./routes/feedbackRoute.js";
+import cors from 'cors';
+
 
 const app = express();
 
@@ -10,22 +14,26 @@ app.use(express.json());
 
 app.use(cors());
 
+
 app.get("/", (request, response) => {
-  console.log(request);
-  return response.status(234).send("welcome to mern");
+    console.log(request);
+    return response.status(234).send(`Welcome to mern stack tutorial`);
 });
-0;
 
-app.use("/transport", transportRoute);
+app.use('/salary',salaryRoute);
+app.use("/feedback", feedbackRoute);
 
-mongoose
-  .connect(mongoDBURL)
-  .then(() => {
-    console.log("App connect to database");
-    app.listen(PORT, () => {
-      console.log(`App listen to port: ${PORT}`);
+
+       
+mongoose.
+connect(mongoDBURL)
+    .then(() => {
+        console.log('App connected to database');
+        app.listen(PORT, () => {
+            console.log(`App is listening to port: ${PORT}`);
+        });
+    })
+    .catch((error) => {
+        console.error('Error connecting to database:', error);
     });
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+
