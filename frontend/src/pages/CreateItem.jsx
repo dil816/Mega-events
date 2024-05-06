@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BackButton from '../components/BackButton';
+import BackButton from '../components/Orderhome/BackButton';
 import Spinner from '../components/Spinner';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -61,7 +61,7 @@ if (!/^[A-Za-z\s]+$/.test(description)) {
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Order Created successfully', { variant: 'success' });
-        navigate('/');
+        navigate('/order');
       })
       .catch((error) => {
         setLoading(false);

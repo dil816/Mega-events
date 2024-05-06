@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
-import BackButton from '../components/BackButton';
+import BackButton from '../components/Orderhome/BackButton';
 import Spinner from '../components/Spinner';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
@@ -67,7 +67,7 @@ const EditOrderRecord = () => {
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Order edited successfully', { variant: 'success' });
-        navigate('/');
+        navigate('/order');
       })
       .catch((error) => {
         setLoading(false);

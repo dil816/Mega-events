@@ -36,12 +36,14 @@ const OrderSingleCard = ({ order }) => {
         <Link to={`/order/details/${order._id}`}>
           <BsInfoCircle className="text-2xl text-green-800 hover:text-black" />
         </Link>
+       {/*
         <Link to={`/order/edit/${order._id}`}>
           <AiOutlineEdit className="text-2xl text-yellow-600 hover:text-black" />
         </Link>
         <Link to={`/order/delete/${order._id}`}>
           <MdOutlineDelete className="text-2xl text-red-600 hover:text-black" />
         </Link>
+  */}
       </div>
       {showModel && (
         <OrderModel order={order} onClose={() => setShowModel(false)} />

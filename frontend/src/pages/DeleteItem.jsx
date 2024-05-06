@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import BackButton from '../components/BackButton';
+import BackButton from '../components/Orderhome/BackButton';
 import Spinner from '../components/Spinner';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -19,7 +19,7 @@ const DeleteOrderRecoard = () => {
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Order Deleted successfully', { variant: 'success' });
-        navigate('/');
+        navigate('/order');
       })
       .catch((error) => {
         setLoading(false);
