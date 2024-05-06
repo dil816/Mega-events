@@ -11,6 +11,7 @@ import registeRoute from "./routes/registerRoute.js";
 import loginRoute from "./routes/loginRoute.js";
 import bookRoute from "./routes/bookRoute.js";
 import transportRoute from "./routes/transportRoute.js";
+import orderRoute from "./routes/orderRoute.js";
 
 import cors from 'cors';
 
@@ -36,6 +37,7 @@ app.use("/register", registeRoute);
 app.use("/login", loginRoute);
 app.use("/books", bookRoute);
 app.use("/transport", transportRoute);
+app.use('/order', orderRoute);
 
 
        
