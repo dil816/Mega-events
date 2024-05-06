@@ -13,6 +13,8 @@ import bookRoute from "./routes/bookRoute.js";
 import transportRoute from "./routes/transportRoute.js";
 import orderRoute from "./routes/orderRoute.js";
 import ticketRoute from './routes/ticketRoute.js';
+import paymentRoute from "./routes/paymentRoute.js";
+
 
 
 import cors from 'cors';
@@ -41,6 +43,7 @@ app.use("/books", bookRoute);
 app.use("/transport", transportRoute);
 app.use('/order', orderRoute);
 app.use('/ticket', ticketRoute);
+app.use("/payment", paymentRoute);
 
 
 
