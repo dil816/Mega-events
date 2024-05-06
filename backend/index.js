@@ -1,9 +1,9 @@
-import "dotenv/config";
+import { PORT, mongoDBURL } from "./config.js";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import agendaRoutes from "../backend/routes/agendaRoutes.js";
-import eventRoutes from "../backend/routes/eventRoutes.js";
+import agendaRoutes from "./routes/agendaRoutes.js";
+import eventRoutes from "./routes/eventRoutes.js";
 import contributersRoutes from "./routes/contributersRoutes.js";
 
 // express app
@@ -24,11 +24,11 @@ app.use("/api/contributors", contributersRoutes);
 
 // connect to the DB
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(mongoDBURL)
   .then(() => {
     console.log("Connected to DB");
     // listen to the port
-    app.listen(process.env.PORT, () => {
+    app.listen(PORT, () => {
       console.log(`listen to port 4000`);
     });
   })
