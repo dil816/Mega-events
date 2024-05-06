@@ -20,7 +20,7 @@ const EditEvent = () => {
 
   useEffect(() => {
     const fetchdata = async () => {
-      const response = await fetch(`http://localhost:4000/api/events/${id}`);
+      const response = await fetch(`http://localhost:5555/api/events/${id}`);
 
       const data = await response.json();
 
@@ -65,7 +65,7 @@ const EditEvent = () => {
     editData.append("file", file);
 
     axios
-      .put(`http://localhost:4000/api/events/${id}`, editData)
+      .put(`http://localhost:5555/api/events/${id}`, editData)
       .then(() => {
         setEventTitle("");
         setStartDate("");

@@ -9,7 +9,7 @@ const EventTable = ({ addEvent }) => {
 
   const Deletehandler = async () => {
     const response = await fetch(
-      `http://localhost:4000/api/events/${addEvent._id}`,
+      `http://localhost:5555/api/events/${addEvent._id}`,
       {
         method: "DELETE",
       }

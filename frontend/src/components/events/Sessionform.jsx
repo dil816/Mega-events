@@ -59,7 +59,7 @@ const Sessionform = () => {
   const handleUpdate = async () => {
     const subData = { title, date, startTime, endTime, timeRange, _id };
 
-    const response = await fetch(`http://localhost:4000/api/ajendas/${_id}`, {
+    const response = await fetch(`http://localhost:5555/api/ajendas/${_id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(subData),
@@ -98,7 +98,7 @@ const Sessionform = () => {
 
     const subData = { title, date, startTime, endTime, timeRange, eventId };
 
-    const response = await fetch("http://localhost:4000/api/ajendas/", {
+    const response = await fetch("http://localhost:5555/api/ajendas/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -143,7 +143,7 @@ const Sessionform = () => {
     contributeData.append("eventId", eventId);
 
     axios
-      .post("http://localhost:4000/api/contributors", contributeData)
+      .post("http://localhost:5555/api/contributors", contributeData)
 
       .then((res) => {
         setName("");

@@ -18,7 +18,7 @@ const EventView = () => {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      const response = await fetch("http://localhost:4000/api/events/");
+      const response = await fetch("http://localhost:5555/api/events/");
 
       const data = await response.json();
 

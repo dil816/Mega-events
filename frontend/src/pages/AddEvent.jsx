@@ -34,7 +34,7 @@ export const AddEvent = () => {
     submitData.append("file", file);
 
     axios
-      .post("http://localhost:4000/api/events/", submitData, {
+      .post("http://localhost:5555/api/events/", submitData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

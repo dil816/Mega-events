@@ -5,7 +5,7 @@ const ProfileCard = ({ contributor }) => {
 
   const deletehandler = async () => {
     const response = await fetch(
-      `http://localhost:4000/api/contributors/${contributor._id}`,
+      `http://localhost:5555/api/contributors/${contributor._id}`,
       {
         method: "DELETE",
       }

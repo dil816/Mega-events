@@ -37,7 +37,7 @@ const UpdateAjenda = () => {
 
     const subData = { title, date, startTime, endTime, timeRange };
 
-    const response = await fetch(`http://localhost:4000/api/ajendas/${id}`, {
+    const response = await fetch(`http://localhost:5555/api/ajendas/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

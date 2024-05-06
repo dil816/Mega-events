@@ -14,7 +14,7 @@ const AjendaDetail = ({ ajend }) => {
 
   const handleDelete = async () => {
     const response = await fetch(
-      `http://localhost:4000/api/ajendas/${ajend._id}`,
+      `http://localhost:5555/api/ajendas/${ajend._id}`,
       {
         method: "DELETE",
       }

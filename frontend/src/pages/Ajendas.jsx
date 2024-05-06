@@ -17,7 +17,7 @@ const Ajendas = () => {
   useEffect(() => {
     const fetchajenda = async () => {
       const response = await fetch(
-        `http://localhost:4000/api/ajendas/${eventId}`
+        `http://localhost:5555/api/ajendas/${eventId}`
       );
 
       const data = await response.json();
@@ -34,7 +34,7 @@ const Ajendas = () => {
   useEffect(() => {
     const fetchcontributors = async () => {
       const response = await fetch(
-        `http://localhost:4000/api/contributors/${eventId}`
+        `http://localhost:5555/api/contributors/${eventId}`
       );
 
       const data = await response.json();
