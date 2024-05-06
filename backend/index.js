@@ -12,6 +12,8 @@ import loginRoute from "./routes/loginRoute.js";
 import bookRoute from "./routes/bookRoute.js";
 import transportRoute from "./routes/transportRoute.js";
 import orderRoute from "./routes/orderRoute.js";
+import ticketRoute from './routes/ticketRoute.js';
+
 
 import cors from 'cors';
 
@@ -38,6 +40,8 @@ app.use("/login", loginRoute);
 app.use("/books", bookRoute);
 app.use("/transport", transportRoute);
 app.use('/order', orderRoute);
+app.use('/ticket', ticketRoute);
+
 
 
        

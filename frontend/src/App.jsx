@@ -43,6 +43,7 @@ import DeleteTransport from "./pages/DeleteTransport";
 import Bookseat from "./pages/Bookseat"
 //import SeatSelction from "./SeatSelection/SeatSelction";
 
+
 import {Route, Routes} from 'react-router-dom'
 import OrderHome from './pages/OrderHome';
 import CreateItem from './pages/CreateItem';
@@ -51,6 +52,14 @@ import EditItem from './pages/EditItem';
 import DeleteItem from './pages/DeleteItem';
 import OrderSingleCard from './components/Orderhome/OrderSingleCard';
 import UserView from './pages/UserView';
+
+import Home from './pages/Ticket';
+import CreateTicket from './pages/CreateTicket';
+import ShowTicket from './pages/ShowTicket';
+import EditTicket from './pages/EditTicket';
+import DeleteTicket from './pages/DeleteTicket';
+import Navbar from './components/Ticket/Navbar';
+
 
 
 
@@ -97,6 +106,7 @@ const App = () => {
         <Route path="/transport/delete/:id" element={<DeleteTransport />} />
        <Route path="/bookseat/:id" element={<Bookseat/>}/>
 
+
        <Route path='/order' element={ <OrderHome/>} />
       <Route path='/order/create' element={<CreateItem/>} />
       <Route path='/order/edit/:_id' element={<EditItem/>} />
@@ -104,6 +114,14 @@ const App = () => {
       <Route path='/order/details/:_id' element={<ShowItem/>} />
       <Route path='/home/userview' element={<UserView/>}/>
       <Route path='/Cart/:id' element={<Cart/>} />
+
+       <Route path='/ticket' element={<Home />} />
+      <Route path='/ticket/create' element={<CreateTicket />} />
+      <Route path='/ticket/details/:id' element={<ShowTicket />} />
+      <Route path='/ticket/edit/:id' element={<EditTicket />} />
+      <Route path='/ticket/delete/:id' element={<DeleteTicket />} />
+      
+
     </Routes>
 
     </>
