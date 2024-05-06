@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/transport/BackButton";
 import Spinner from "../components/Spinner";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
@@ -18,7 +18,7 @@ function DeleteTransport() {
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Bus Deleted Successfully", { variant: "success" });
-        navigate("/");
+        navigate("/transport");
       })
       .catch((error) => {
         setLoading(false);

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
 
-function BackButton({ destination = "/" }) {
+function BackButton({ destination = "/transport" }) {
   return (
     <div className="flex">
       <Link

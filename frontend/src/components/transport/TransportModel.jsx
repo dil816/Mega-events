@@ -40,11 +40,9 @@ const BookModel = ({ book, onClose }) => {
           <BiUserCircle className="text-red-300 text-2xl" />
           <h2 className="my-1">{book.price}</h2>
         </div>
-        <p className="mt-4">Anything want to show</p>
+        <p className="mt-4">Mega - Event</p>
         <p className="mt-2">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, et!
-          Eaque labore enim optio saepe error corporis asperiores cumque iusto
-          debitis adipisci, velit et eius totam ut odio illo quae.
+          This is for your convenience
         </p>
       </div>
     </div>

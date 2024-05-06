@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Transport />} />
+        <Route path="/transport" element={<Transport />} />
         <Route path="/transport/create" element={<CreateTransport />} />
         <Route path="/transport/details/:id" element={<ShowTransport />} />
         <Route path="/transport/edit/:id" element={<EditTransport />} />

@@ -6,6 +6,8 @@ import { MdOutlineAddBox } from "react-icons/md";
 import BooksCard from "../components/transport/TransportCard";
 import BooksTable from "../components/transport/TransportTable";
 
+import backgroundImage from '../assets/TransportAssets/blur1.jpg'
+
 function Transport() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -26,6 +28,17 @@ function Transport() {
   }, []);
 
   return (
+
+    <div
+      className='p-4'
+      style={{
+        backgroundImage: `url(${backgroundImage})`, // Set background image
+        backgroundSize: 'cover', // Adjust background image size
+        backgroundPosition: 'center', // Adjust background image position
+        minHeight: '100vh', // Ensure the background covers the entire screen
+      }}
+    >
+
     <div className="p-4">
       <div className="flex justify-center items-center gap-x-4">
         <button
@@ -43,7 +56,7 @@ function Transport() {
       </div>
       <div className="flex justify-between items-center">
         <h1 className="text-3xl my-8">Bus list</h1>
-        <Link to={"./transport/create"}>
+        <Link to={"/transport/create"}>
           <MdOutlineAddBox className="text-sky-800 text-4xl" />
         </Link>
       </div>
@@ -54,6 +67,7 @@ function Transport() {
       ) : (
         <BooksCard books={books} />
       )}
+    </div>
     </div>
   );
 }

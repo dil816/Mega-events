@@ -1,9 +1,11 @@
 import { useState } from "react";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/transport/BackButton";
 import Spinner from "../components/Spinner";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSnackbar } from "notistack";
+
+import backgroundImage from '../assets/TransportAssets/blur.jpg'
 
 function CreateTransport() {
   const [b_Code, setB_COde] = useState("");
@@ -86,7 +88,7 @@ if (!/^[A-Z]{0,2}$/.test(b_Code)) {
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Created Successfully", { variant: "success" });
-        navigate("/");
+        navigate("/transport");
       })
       .catch((error) => {
         setLoading(false);
@@ -99,6 +101,16 @@ if (!/^[A-Z]{0,2}$/.test(b_Code)) {
   };
 
   return (
+
+    <div
+      className='p-4'
+      style={{
+        backgroundImage: `url(${backgroundImage})`, // Set background image
+        backgroundSize: 'cover', // Adjust background image size
+        backgroundPosition: 'center', // Adjust background image position
+        minHeight: '100vh', // Ensure the background covers the entire screen
+      }}
+    >
     <div className="p-4">
       <BackButton />
       <h1 className="text-3xl my-4">Create Bus</h1>
@@ -170,6 +182,7 @@ if (!/^[A-Z]{0,2}$/.test(b_Code)) {
           Save
         </button>
       </div>
+    </div>
     </div>
   );
 }

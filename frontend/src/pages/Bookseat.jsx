@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import axios from 'axios';
+import BackButton from "../components/transport/BackButton";
+
+import backgroundImage from '../assets/TransportAssets/blur3.jpg'
 
 const Cart = () => {
   const { id } = useParams();
@@ -59,14 +62,29 @@ const Cart = () => {
   }
 
   return (
+
+    <div
+      className='p-4'
+      style={{
+        backgroundImage: `url(${backgroundImage})`, // Set background image
+        backgroundSize: 'cover', // Adjust background image size
+        backgroundPosition: 'center', // Adjust background image position
+        minHeight: '100vh', // Ensure the background covers the entire screen
+      }}
+    >
+    
     <div>
+      
       <br></br>
       <br></br>
+      <BackButton />
       <br></br>
       <br></br>
+
+      
 
       <p className='text-green uppercase tracking-wide font-medium text-lg'>selected bus</p>
-
+      
       <br></br>
 
       <div className="overflow-x-auto">
@@ -121,6 +139,7 @@ const Cart = () => {
       <div className="flex justify-center">
         <button onClick={handlePayment} className="btn btn-primary mt-4">Pay Here</button>
       </div>
+    </div>
     </div>
   );
 };

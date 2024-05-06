@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/transport/BackButton";
 import Spinner from "../components/Spinner";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
@@ -51,7 +51,7 @@ function EditTransport() {
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Edited Successfully", { variant: "success" });
-        navigate("/");
+        navigate("/transport");
       })
       .catch((error) => {
         setLoading(false);

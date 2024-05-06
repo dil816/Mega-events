@@ -2,8 +2,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/transport/BackButton";
 import Spinner from "../components/Spinner";
+
+import backgroundImage from '../assets/TransportAssets/blur2.jpg'
 
 function ShowTransport() {
   const [book, setBook] = useState({});
@@ -25,6 +27,17 @@ function ShowTransport() {
   }, []);
 
   return (
+
+    <div
+      className='p-4'
+      style={{
+        backgroundImage: `url(${backgroundImage})`, // Set background image
+        backgroundSize: 'cover', // Adjust background image size
+        backgroundPosition: 'center', // Adjust background image position
+        minHeight: '100vh', // Ensure the background covers the entire screen
+      }}
+    >
+
     <div className="p-4">
       <BackButton />
       <h1 className="text-3xl my-4">Show Bus</h1>
@@ -81,6 +94,7 @@ function ShowTransport() {
         
       )}
       
+    </div>
     </div>
   );
 }
