@@ -68,6 +68,7 @@ const Home = () => {
           <thead>
             <tr>
               <th className='border border-slate-600 rounded-md'>No</th>
+              <th className='border border-slate-600 rounded-md'>ID</th>
               <th className='border border-slate-600 rounded-md'>Name</th>
               <th className='border border-slate-600 rounded-md'>Basic Salary</th>
               <th className='border border-slate-600 rounded-md'>Attendance</th>
@@ -84,6 +85,9 @@ const Home = () => {
               <tr key={salary._id} className='h-8'>
                 <td className='border border-slate-700 rounded-md text-center'>
                   {index + 1}
+                </td>
+                <td className='border border-slate-700 rounded-md text-center max-md:hidden'>
+                  {salary.s_id}
                 </td>
                 <td className='border border-slate-700 rounded-md text-center max-md:hidden'>
                   {salary.name}
