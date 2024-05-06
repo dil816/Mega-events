@@ -6,6 +6,8 @@ import axios from 'axios';
 import Spinner from '../components/Spinner';
 import { Link } from "react-router-dom";
 
+import backgroundImage from '../assets/UserAssets/bachg3.jpg'
+
 
 
 const UpdateUserProfile = () => {
@@ -67,6 +69,16 @@ const UpdateUserProfile = () => {
       }
 
   return (
+
+    <div
+    className='p-4'
+    style={{
+      backgroundImage: `url(${backgroundImage})`, // Set background image
+      backgroundSize: 'cover', // Adjust background image size
+      backgroundPosition: 'center', // Adjust background image position
+      minHeight: '100vh', // Ensure the background covers the entire screen
+      }}
+    >
     <div className='p-4'>
       <h1 className='text-3xl my-4'>Update User Profile</h1>
       {loading ? <Spinner /> : ""}
@@ -120,6 +132,7 @@ const UpdateUserProfile = () => {
         <Link to = ''>
         <button className='p-2 bg-sky-300 m-8' onClick={handleEditUserProfile}>Update</button>
         </Link>
+      </div>
       </div>
     </div>
   )

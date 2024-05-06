@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import BackButton from '../components/BackButton';
+import BackButton from '../components/users/BackButton';
 import Spinner from '../components/Spinner';
 //import { Link } from 'react-router-dom';
 
