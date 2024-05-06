@@ -16,7 +16,7 @@ const Category = () => {
       <h2 className='text-4x1 md:text-5x1 font-bold my-2 md:leading-sung leading-sung'>Popular Catagories</h2>
     </div>
 
-    {/category card/}
+    {/*category card*/}
     <div className='flex flex-col sm:flex-row flex-wrap gap-8 justify-around items-center mt-12'>
       {
         catagoryItems.map((item,i) => (
