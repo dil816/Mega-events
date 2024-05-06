@@ -10,6 +10,7 @@ import usersRoute from "./routes/usersRoute.js";
 import registeRoute from "./routes/registerRoute.js";
 import loginRoute from "./routes/loginRoute.js";
 import bookRoute from "./routes/bookRoute.js";
+import transportRoute from "./routes/transportRoute.js";
 
 import cors from 'cors';
 
@@ -34,6 +35,7 @@ app.use("/users", usersRoute);
 app.use("/register", registeRoute);
 app.use("/login", loginRoute);
 app.use("/books", bookRoute);
+app.use("/transport", transportRoute);
 
 
        

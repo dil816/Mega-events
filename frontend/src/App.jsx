@@ -35,6 +35,15 @@ import EditBook from "./pages/EditBook";
 import DeleteBook from "./pages/DeleteBook";
 import Navbar from "./components/home/Navbar";
 
+import Transport from "./pages/Transport";
+import CreateTransport from "./pages/CreateTransport";
+import ShowTransport from "./pages/ShowTransport";
+import EditTransport from "./pages/EditTransport";
+import DeleteTransport from "./pages/DeleteTransport";
+import Bookseat from "./pages/Bookseat"
+//import SeatSelction from "./SeatSelection/SeatSelction";
+
+
 
 const App = () => {
   return (
@@ -71,6 +80,13 @@ const App = () => {
         <Route path="/books/details/:id" element={<ShowBook />} />
         <Route path="/books/edit/:id" element={<EditBook />} />
         <Route path="/books/delete/:id" element={<DeleteBook />} />
+
+        <Route path="/transport" element={<Transport />} />
+        <Route path="/transport/create" element={<CreateTransport />} />
+        <Route path="/transport/details/:id" element={<ShowTransport />} />
+        <Route path="/transport/edit/:id" element={<EditTransport />} />
+        <Route path="/transport/delete/:id" element={<DeleteTransport />} />
+       <Route path="/bookseat/:id" element={<Bookseat/>}/>
     </Routes>
 
     </>
