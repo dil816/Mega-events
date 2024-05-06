@@ -9,6 +9,8 @@ import feedbackRoute from "./routes/feedbackRoute.js";
 import usersRoute from "./routes/usersRoute.js";
 import registeRoute from "./routes/registerRoute.js";
 import loginRoute from "./routes/loginRoute.js";
+import bookRoute from "./routes/bookRoute.js";
+
 import cors from 'cors';
 
 
@@ -16,10 +18,12 @@ const app = express();
 
 app.use(express.json());
 
+
 app.use(cors());
 
 
 app.get("/", (request, response) => {
+
     console.log(request);
     return response.status(234).send(`Welcome to mern stack tutorial`);
 });
@@ -29,6 +33,7 @@ app.use("/feedback", feedbackRoute);
 app.use("/users", usersRoute);
 app.use("/register", registeRoute);
 app.use("/login", loginRoute);
+app.use("/books", bookRoute);
 
 
        
@@ -43,5 +48,6 @@ connect(mongoDBURL)
     .catch((error) => {
         console.error('Error connecting to database:', error);
     });
+
 
 

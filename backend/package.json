@@ -9,7 +9,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "Deshan Jeewantha",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
