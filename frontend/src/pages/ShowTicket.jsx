@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 import BackButton from "../components/Ticket/BackButton";
 import Spinner from "../components/Spinner";
 
+
+import backgroundImage from "../assets/TicketAssets/home2.jpg";
+
 const ShowTicket = () => {
   const [book, setBook] = useState({});
   const [loading, setLoading] = useState(false);
@@ -24,6 +27,16 @@ const ShowTicket = () => {
   }, []);
 
   return (
+    
+    <div
+      className="p-4"
+      style={{
+        backgroundImage: ` url(${backgroundImage})`, // Set background image
+        backgroundSize: "cover", // Adjust background image size
+        backgroundPosition: "center", // Adjust background image position
+        minHeight: "100vh", // Ensure the background covers the entire screen
+      }}
+    >
     <div className="p-4">
       <BackButton />
       <h1 className="text-3xl my-4">Show Ticket</h1>
@@ -84,6 +97,7 @@ const ShowTicket = () => {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };
