@@ -3,7 +3,7 @@ import EventTable from "../components/events/EventTable";
 import SideNavbar from "../components/SideNavbar";
 import { Link } from "react-router-dom";
 import useEventcontext from "../hooks/useEventcontext";
-
+import Footer from "../components/footer";
 const Events = () => {
   //const [addEvents, setAddEvents] = useState(null);
   const { events, dispatch1 } = useEventcontext();
@@ -120,6 +120,7 @@ const Events = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
