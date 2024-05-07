@@ -8,6 +8,7 @@ import DeleteSalaryRecoard from "./pages/DeleteSalaryRecoard";
 import ShowSalary from "./pages/ShowSalary";
 import Navbar from "./components/Navbar";
 
+import FeedbackAdmin from "./pages/FeedbackAdmin";
 import Feedback from "./pages/Feedback";
 import CreateFeedback from "./pages/CreateFeedback";
 import ShowFeedback from "./pages/ShowFeedback";
@@ -81,6 +82,7 @@ const App = () => {
         <Route path="/salary/delete/:_id" element={<DeleteSalaryRecoard />} />
         <Route path="/salary/details1/:_id" element={<ShowSalary />} />
 
+        <Route path="/feedbackadmin" element={<FeedbackAdmin />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/feedback/create" element={<CreateFeedback />} />
         <Route path="/feedback/details/:id" element={<ShowFeedback />} />
