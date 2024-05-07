@@ -7,6 +7,9 @@ import { MdOutlineAddBox } from "react-icons/md";
 import BooksTable from "../components/Ticket/TicketTable";
 import BooksCard from "../components/Ticket/TicketCard";
 
+
+import backgroundImage from "../assets/TicketAssets/home2.jpg";
+
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -28,6 +31,18 @@ const Home = () => {
 
   console.log(books.length);
   return (
+
+    <div
+      className="p-4"
+      style={{
+        backgroundImage: ` url(${backgroundImage})`, // Set background image
+        backgroundSize: "cover", // Adjust background image size
+        backgroundPosition: "center", // Adjust background image position
+        minHeight: "100vh", // Ensure the background covers the entire screen
+      }}
+    >
+
+    
     <div className="p-4">
       <h1 className="mb-5 text-5xl font-bold">Create Ticket</h1>
 
@@ -465,6 +480,7 @@ const Home = () => {
           <a className="link link-hover">Cookie policy</a>
         </nav>
       </footer>
+    </div>
     </div>
   );
 };
