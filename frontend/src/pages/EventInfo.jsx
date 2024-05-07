@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { format } from "date-fns";
 import useAjendacontext from "../hooks/useAjendacontext";
 import { useParams } from "react-router-dom";
-import ProfileCard from "../components/events/ProfileCard";
-import AjendaDetail from "../components/events/AjendaDetail";
+import ProfileCard from "../components/events/ProfileCard1";
+import AjendaDetail from "../components/events/AjendaDetail1";
 
 const EventInfo = () => {
   const [events, setEvents] = useState(null);
