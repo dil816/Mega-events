@@ -3,7 +3,6 @@ import { AiOutlineEdit } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineDelete } from "react-icons/md";
 import { useState } from "react";
-import Navbar from '../Navbar';
 import OrderPdf from "./OrderPdf";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 
@@ -20,7 +19,6 @@ const OrderTable = ({ order }) => {
 
   return (
     <>
-    <Navbar/>
     <br/>
       <div className="form-control">
         <input
