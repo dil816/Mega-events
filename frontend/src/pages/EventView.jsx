@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import EventDetails from "../components/events/EventDetails";
 import useEventcontext from "../hooks/useEventcontext";
 import EventCalendar from "../components/events/EventCalendar";
+import Footer from "../components/footer";
 
 const EventView = () => {
   //const [events, setEvents] = useState(null);
@@ -59,6 +60,7 @@ const EventView = () => {
           ))}
       </div>
       {events && <EventCalendar events={events} />}
+      <Footer/>
     </>
   );
 };

@@ -70,6 +70,9 @@ import { AddEvent } from "./pages/AddEvent";
 import Events from "./pages/Events";
 import EditEvent from "./pages/EditEvent";
 import EventInfo from "./pages/EventInfo";
+import UserShowOrder from "./pages/UserShowOrder";
+import UserShowTransport from "./pages/UserShowTransport";
+import UserShowBook from "./pages/UserShowBook";
 
 const App = () => {
   return (
@@ -101,6 +104,7 @@ const App = () => {
         <Route path="/users/edit/:id" element={<EditUser />} />
         <Route path="/users/delete/:id" element={<DeleteUser />} />
 
+        <Route path="/usershowbook" element={<UserShowBook />} />
         <Route path="/bookadmin" element={<ShowBookAdmin />} />
         <Route path="/books" element={<Home />} />
         <Route path="/books/create" element={<CreateBook />} />
@@ -108,6 +112,7 @@ const App = () => {
         <Route path="/books/edit/:id" element={<EditBook />} />
         <Route path="/books/delete/:id" element={<DeleteBook />} />
 
+        <Route path="/usershowtransport" element={<UserShowTransport />} />
         <Route path="/transportadmin" element={<TransportAdmin />} />
         <Route path="/transport" element={<Transport />} />
         <Route path="/transport/create" element={<CreateTransport />} />
@@ -116,6 +121,7 @@ const App = () => {
         <Route path="/transport/delete/:id" element={<DeleteTransport />} />
         <Route path="/bookseat/:id" element={<Bookseat />} />
 
+        <Route path="/usershoworder" element={<UserShowOrder />} />
         <Route path="/order" element={<OrderHome />} />
         <Route path="/order/create" element={<CreateItem />} />
         <Route path="/order/edit/:_id" element={<EditItem />} />

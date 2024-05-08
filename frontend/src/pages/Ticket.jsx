@@ -13,7 +13,7 @@ import backgroundImage from "../assets/TicketAssets/home2.jpg";
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [showType, setShowType] = useState("table");
+  const [showType, setShowType] = useState("card");
 
   useEffect(() => {
     setLoading(true);
