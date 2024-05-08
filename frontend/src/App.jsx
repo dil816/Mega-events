@@ -32,6 +32,7 @@ import ShowBook from "./pages/ShowBook";
 import EditBook from "./pages/EditBook";
 import DeleteBook from "./pages/DeleteBook";
 
+import TransportAdmin from "./pages/TransportAdmin";
 import Transport from "./pages/Transport";
 import CreateTransport from "./pages/CreateTransport";
 import ShowTransport from "./pages/ShowTransport";
@@ -103,6 +104,7 @@ const App = () => {
         <Route path="/books/edit/:id" element={<EditBook />} />
         <Route path="/books/delete/:id" element={<DeleteBook />} />
 
+        <Route path="/transportadmin" element={<TransportAdmin />} />
         <Route path="/transport" element={<Transport />} />
         <Route path="/transport/create" element={<CreateTransport />} />
         <Route path="/transport/details/:id" element={<ShowTransport />} />
