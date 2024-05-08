@@ -8,6 +8,7 @@ import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import SalaryPdf from '../components/SalaryPdf';
 import SideNavbar from '../components/SideNavbar';
+import Footer from "../components/footer";
 
 import backgroundImage from '../assets/SalaryAssets/bimage2.jpg'
 
@@ -39,6 +40,7 @@ const Home = () => {
   };
   console.log(salary)
   return (
+    <>
     <div
       className='p-4'
       style={{
@@ -155,6 +157,8 @@ const Home = () => {
     </div>
     </div>
     </div>
+   <Footer/>
+   </>
   );
 };
 export default Home

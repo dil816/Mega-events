@@ -7,6 +7,8 @@ import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
 import OrderCard from "../components/Orderhome/OrderCard";
 import OrderTable from "../components/Orderhome/OrderTable";
+import SideNavbar from "../components/SideNavbar";
+import Footer from "../components/footer";
 
 const Home = () => {
   const [orders, setOrders] = useState([]);
@@ -28,7 +30,10 @@ const Home = () => {
   }, []);
 
   return (
-
+    <>
+<div className="flex flex-wrap [@media_screen_and(max-width:700px)]:flex-col">
+        <SideNavbar />
+        <div className="flex-[85%] p-[20px]">
   
     
     <div className="p-4">
@@ -66,6 +71,10 @@ const Home = () => {
         <OrderCard order={orders} />
       )}
     </div>
+    </div>
+    </div>
+    <Footer/>
+    </>
   );
 };
 
