@@ -354,14 +354,9 @@ const Home = () => {
         <h1 className="text-3xl my-8">Ticket List</h1>
 
         <div className="flex justify-center items-center gap-x-4">
+          
           <button
-            className="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg"
-            onClick={() => setShowType("table")}
-          >
-            Table
-          </button>
-          <button
-            className="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg"
+            className="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg "
             onClick={() => setShowType("card")}
           >
             Card
@@ -440,6 +435,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <br></br>
       <footer className="footer p-10 bg-base-200 text-base-content">
         <aside>
           <svg
