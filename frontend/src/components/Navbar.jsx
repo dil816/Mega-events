@@ -4,7 +4,9 @@ const Navbar = () => {
   return (
     <header className="bg-gradient-to-r from-purple-500 to-pink-500 shadow-md">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-white">MEGA Events</h1>
+        <Link to="/">
+          <h1 className="text-2xl font-bold text-white">MEGA Events</h1>
+        </Link>
         <nav className="flex items-center space-x-4">
           <a className="text-white hover:text-gray-200 text-sm font-semibold">
             <Link to="/eventsview" className="activity home-a">
