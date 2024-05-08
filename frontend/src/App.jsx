@@ -73,12 +73,14 @@ import EventInfo from "./pages/EventInfo";
 import UserShowOrder from "./pages/UserShowOrder";
 import UserShowTransport from "./pages/UserShowTransport";
 import UserShowBook from "./pages/UserShowBook";
+import HomePage from "./pages/HomePage";
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Routes>
+        <Route path="/" element={<HomePage/>}/>
         <Route path="/salary" element={<SalaryHome />} />
         <Route path="/salary/create" element={<CreateSalaryRecoard />} />
         <Route path="/salary/details/:_id" element={<ShowSalaryRecoards />} />
