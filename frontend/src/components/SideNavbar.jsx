@@ -46,6 +46,12 @@ const SideNavbar = () => {
               fdback
             </a>
           </Link>
+          <br />
+          <Link to={"/bookadmin"}>
+            <a className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white">
+              Markting
+            </a>
+          </Link>
         </div>
       </div>
     </>

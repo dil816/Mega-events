@@ -27,6 +27,7 @@ import DashBoard from "./pages/DashBoard";
 import UserProfile from "./pages/UserProfile";
 import UpdateUserProfile from "./pages/UpdateUserProfile";
 
+import ShowBookAdmin from "./pages/ShowBookAdmin";
 import Home from "./pages/Home";
 import CreateBook from "./pages/CreateBooks";
 import ShowBook from "./pages/ShowBook";
@@ -100,6 +101,7 @@ const App = () => {
         <Route path="/users/edit/:id" element={<EditUser />} />
         <Route path="/users/delete/:id" element={<DeleteUser />} />
 
+        <Route path="/bookadmin" element={<ShowBookAdmin />} />
         <Route path="/books" element={<Home />} />
         <Route path="/books/create" element={<CreateBook />} />
         <Route path="/books/details/:id" element={<ShowBook />} />
