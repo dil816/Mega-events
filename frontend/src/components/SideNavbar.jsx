@@ -28,6 +28,12 @@ const SideNavbar = () => {
               users
             </a>
           </Link>
+          <br />
+          <Link to={"/ticketadmin"}>
+            <a className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white">
+              ticket
+            </a>
+          </Link>
         </div>
       </div>
     </>

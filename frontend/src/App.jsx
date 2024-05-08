@@ -48,6 +48,7 @@ import DeleteItem from "./pages/DeleteItem";
 import UserView from "./pages/UserView";
 import Cart from "./pages/Cart";
 
+import TicketAdmin from "./pages/TicketAdmin";
 import Ticket from "./pages/Ticket";
 import CreateTicket from "./pages/CreateTicket";
 import ShowTicket from "./pages/ShowTicket";
@@ -117,6 +118,7 @@ const App = () => {
         <Route path="/home/userview" element={<UserView />} />
         <Route path="/Cart/:id" element={<Cart />} />
 
+        <Route path="/ticketadmin" element={<TicketAdmin />} />
         <Route path="/ticket" element={<Ticket />} />
         <Route path="/ticket/create" element={<CreateTicket />} />
         <Route path="/ticket/details/:id" element={<ShowTicket />} />
