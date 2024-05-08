@@ -7,6 +7,7 @@ import { BsInfoCircle } from 'react-icons/bs';
 import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import SalaryPdf from '../components/SalaryPdf';
+import SideNavbar from '../components/SideNavbar';
 
 import backgroundImage from '../assets/SalaryAssets/bimage2.jpg'
 
@@ -62,7 +63,9 @@ const Home = () => {
           marginBottom: '1rem',
         }}
       />
-
+<div className="flex flex-wrap [@media_screen_and(max-width:700px)]:flex-col">
+        <SideNavbar />
+        <div className="flex-[85%] p-[20px]">
       <div className='flex justify-center items-center gap-x-4'>
       </div>
       <div className='flex-grow text-center'>
@@ -148,6 +151,8 @@ const Home = () => {
           </tbody>
         </table>
       )}
+    </div>
+    </div>
     </div>
     </div>
   );
